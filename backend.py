@@ -33,6 +33,6 @@ def index():
 	return 'Welcome ENSIA Students from Flask!'
 
 if __name__ == "__main__":
-	app.run(port=8080)
-
-
+    # ✅ use host and port from Leapcell environment
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
