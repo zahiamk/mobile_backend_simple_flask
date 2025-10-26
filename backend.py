@@ -4,7 +4,7 @@ import datetime
 import os
 
 app = Flask(__name__)
-
+CORS(app)  # ✅ Enable CORS for all routes
 @app.route('/news.all.get')
 def get_news_all_articles():
     try:
